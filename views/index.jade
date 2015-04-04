@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	div.class
+		h2 root
+	h4 Picking up GeoLocation...
+	p We do not recognize this event. Add Event
+	form(action='/addTeam', method="post")
+		input(type="text", name="team", placeholder="Add Team")
+		input(type='submit')
+	form(action='/addEvent', method="post")
+		input(type="text", placeholder="Add Event")
+		input(type='submit')
+	h3 Which Side are you on?
+	img.team1(src='/img/nynav.png')
+	img.team2(src='/img/nybp.png')
+	img.show1(src='/img/blueSide.png')
+	img.show2(src='/img/redSide.png')
+
+

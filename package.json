@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "body-parser": "^1",
+    "express": "^4",
+    "jade": "^1",
+    "mongoose": "^4.0.1",
+    "shortid": "^2.2.1"
+  }
+}

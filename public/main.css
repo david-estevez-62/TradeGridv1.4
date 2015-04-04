@@ -1,0 +1,51 @@
+
+.class{
+	background:red;
+	margin-top:0px;
+	width:100%;
+	height:5%;
+}
+.team1{
+	width:15%;
+	height:10%;
+	margin: 5% 0 0 30%;
+	border-radius: 100px;
+}
+.team2{
+	width:12.5%;
+	margin: 5% 0 0 10%;
+	border-radius: 100px;
+}
+h3{
+	text-align: center;
+}
+.show1(max-width:400px){
+	position:relative;
+	top:100px;
+	left:50px;
+}
+.show2(max-width:400px){
+	position:absolute;
+	top:100px;
+	left:51px;
+}
+@media screen and (min-width: 401px) {
+	.show1{
+		visibility: hidden;
+	    }
+	.show2{
+		visibility: hidden;
+	}
+}
+
+
+/*@media screen and (max-width: 400px) {
+    .show1{
+		display:initial;
+		
+    }
+    .show2{
+    	display:none;
+    	float:right;
+    }
+}*/
