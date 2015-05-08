@@ -1,4 +1,25 @@
-// 
+$(function(){
+
+var tabs = document.querySelector('paper-tabs');
+	tabs.addEventListener('core-select', function() {
+	console.log("Selected: " + tabs.selected);
+});
+
+})
+
+// $(document).ready(function(){
+// 	$('.chant1').on('click', function(){
+// 		var postData = $(".input1").val();
+
+// 		console.log(postData)
+
+// 		$.post('/addChant', {postData:postData} , function(data){
+// 			// console.log(data);
+// 			console.log('test', data);
+
+// 		});
+// 	})
+// });
 
 		
 	// $(".team1").on('click', function(e){

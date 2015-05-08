@@ -2,10 +2,40 @@ doctype html
 html(lang='en')
 	head
 		meta(charset="utf-8")
-		link(rel="stylesheet", type="text/css", href="/main.css")
-		link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
 		title Revive
-
+		
+		script(src='../bower_components/webcomponentsjs/webcomponents.js')
+		link(rel='import', href='../bower_components/paper-button/paper-button.html')
+		link(rel='import', href='../bower_components/paper-tabs/paper-tabs.html')
+		link(rel='import', href='../bower_components/paper-input/paper-input.html')
+		link(rel='import', href='../bower_components/paper-menu-button/paper-menu-button.html')
+		link(rel='import', href='../bower_components/paper-icon-button/paper-icon-button.html')
+		link(rel='import', href='../bower_components/paper-dropdown/paper-dropdown.html')
+		link(rel='import', href='../bower_components/core-menu/core-menu.html')
+		link(rel='import', href='../bower_components/paper-item/paper-item.html')
+		link(rel="stylesheet", type="text/css", href="/main.css")
 	body
+		div.class
+			a(href='/')
+				h2 PatientLog
+		<paper-button>efew</paper-button>
+		<paper-tabs id="tabs" selected="all" self-end>
+		<paper-tab name="all">All</paper-tab>
+		<paper-tab name="favorites">Favorites</paper-tab>
+		<paper-tab name="about">About</paper-tab>
+		<paper-tab name="contact">Contact Us</paper-tab>
+		</paper-tabs>
+		
+		<paper-menu-button>
+		<paper-icon-button icon="menu" noink></paper-icon-button>
+		<paper-dropdown class="dropdown">
+		<core-menu class="menu">
+		<paper-item>Share</paper-item>
+		<paper-item>Settings</paper-item>
+		<paper-item>Help</paper-item>
+		</core-menu>
+		</paper-dropdown>
+		</paper-menu-button>
 		block content
+
 		script(src="/client.js")

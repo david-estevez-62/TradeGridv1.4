@@ -1,0 +1,17 @@
+extends layout
+block content
+	div.searchlist
+		h3 Patient Lookup Results
+		table.table5
+			thead
+				tr
+					th Name
+					th PatientId
+			tbody
+				for n in userlist
+					tr
+						td
+							a#findProfile(href='/patient/#{n.username}')
+								p#otherProfile= n.name
+						td
+							p= n._id

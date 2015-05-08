@@ -1,20 +1,18 @@
 extends layout
 
 block content
-	div.class
-		h2 root
-	h4 Picking up GeoLocation...
-	p We do not recognize this event. Add Event
-	form(action='/addTeam', method="post")
-		input(type="text", name="team", placeholder="Add Team")
+	form.form-group(action="/search", method="post")
+				input#searchinput.searchinput(type="text", placeholder="search for patient", name="search")
+				input(type="submit", value="Search")
+	h2.add Add Patient:
+	form.form2(action='/addPatient', method="post")
+		paper-input.input5(floatingLabel label="name", type="text", name="name", placeholder="Add Patient")
+		paper-input.input5(floatingLabel label="dob", type="text", name="dob", placeholder="Add Patient")
+		paper-input.input5(floatingLabel label="social", type="text", name="social", placeholder="Add Patient")
+		paper-input.input5(floatingLabel label="amount", type="number", name="amount", placeholder="Add Patient")
 		input(type='submit')
-	form(action='/addEvent', method="post")
-		input(type="text", placeholder="Add Event")
-		input(type='submit')
-	h3 Which Side are you on?
-	img.team1(src='/img/nynav.png')
-	img.team2(src='/img/nybp.png')
-	img.show1(src='/img/blueSide.png')
-	img.show2(src='/img/redSide.png')
+
+
+
 
 
