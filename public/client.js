@@ -1,17 +1,17 @@
 $(function(){
 
 
-var tabs = document.querySelector('paper-tabs');
-	tabs.addEventListener('core-select', function() {
-	// console.log("Selected: " + tabs.selected);
-});
+// var tabs = document.querySelector('paper-tabs');
+// 	tabs.addEventListener('core-select', function() {
+// 	// console.log("Selected: " + tabs.selected);
+// });
 
 
 
 var Status = 'open';
 
 
-$(".sidebarHeader, #toggle").click(function(){
+$(".sidebarHeader").click(function(){
 	console.log('hi')
 	if(Status === 'open'){
 		console.log('hi')

@@ -8,6 +8,7 @@ html(lang='en')
 		
 		script(src='../bower_components/webcomponentsjs/webcomponents.js')
 		script(src="../bower_components/sweetalert/dist/sweetalert.min.js")
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
 		script(src="/script.js")
 		link(rel="stylesheet" type="text/css" href="../bower_components/sweetalert/dist/sweetalert.css")
 		link(rel='import', href='../bower_components/paper-button/paper-button.html')
@@ -28,15 +29,34 @@ html(lang='en')
 					h2#title TradeGrid
 			div#cssmenu
 				<ul id='nav'>
-				<li><a href='#'>Home</a></li>
-				<li class='has-sub'><a href='#'>Products</a>
+
+				<li class='has-sub'><a href='#'>Account Overview</a>
 				<ul>
-				<li class='has-sub'><a href='#'>Product 1</a>
+				<li class='has-sub'><a href='#'>Positions</a>
 				<ul>
 				<li><a href='#'>Sub Product</a></li>
-				<li><a href='#'>Sub Product</a></li></ul>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
 				</li>
-				<li class='has-sub'><a href='#'>Product 2</a>
+				<li class='has-sub'><a href='#'>Balance</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Gain/Loss</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Watch List</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Portfolio Planner</a>
 				<ul>
 				<li><a href='#'>Sub Product</a></li>
 				<li><a href='#'>Sub Product</a></li>
@@ -44,8 +64,91 @@ html(lang='en')
 				</li>
 				</ul>
 				</li>
-				<li><a href='#'>About</a></li>
-				<li><a href='#'>Contact</a></li>
+
+
+				<li class='has-sub'><a href='#'>Trade</a>
+				<ul>
+				<li class='has-sub'><a href='#'>Order Status</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Saved Orders</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Trade Triggers</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Autotrade</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				</ul>
+				</li>
+
+
+
+				<li class='has-sub'><a href='#'>Research & Ideas</a>
+				<ul>
+				<li class='has-sub'><a href='#'>Stock Summary</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Options Research</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Charts</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Alerts</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>IPOs</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				</ul>
+				</li>
+
+				<li class='has-sub'><a href='#'>Sign in/Join</a>
+				<ul>
+				<li class='has-sub'><a href='#'>Watch List</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				<li class='has-sub'><a href='#'>Portfolio Planner</a>
+				<ul>
+				<li><a href='#'>Sub Product</a></li>
+				<li><a href='#'>Sub Product</a></li>
+				</ul>
+				</li>
+				</ul>
+				</li>
+
 				</ul>
 		div.block1
 		div.block2
@@ -90,5 +193,4 @@ html(lang='en')
 					input(type="submit")
 			div.btmbarHeader
 		block content
-		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
 		script(src="/client.js")
