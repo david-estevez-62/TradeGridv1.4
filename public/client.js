@@ -11,7 +11,7 @@ var tabs = document.querySelector('paper-tabs');
 var Status = 'open';
 
 
-$("#toggle, .sidebarHeader").click(function(){
+$(".sidebarHeader, #toggle").click(function(){
 	console.log('hi')
 	if(Status === 'open'){
 		console.log('hi')
@@ -26,6 +26,24 @@ $("#toggle, .sidebarHeader").click(function(){
 })
 
 
+
+// $(".sidebarHeader").click(function(){
+// 	console.log('hi')
+// 	if(Status === 'open'){
+// 		console.log('hi')
+// 		$('.sidebar').toggle();
+// 		$(".label").css({'margin-left':'0px'});
+// 		Status = 'closed';
+// 	}else{
+// 		$('.sidebar').toggle();
+// 		$(".label").css({'margin-left':'-0.5px'});
+// 		Status = 'open'
+// 	}
+// })
+
+
+
+
 $(".btmbarHeader").click(function(){
 	$('.btmbar').toggle()
 })
@@ -34,6 +52,9 @@ $(".btmbarHeader").click(function(){
 
 
 })
+
+
+
 
 
 
