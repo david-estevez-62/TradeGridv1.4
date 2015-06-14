@@ -9,6 +9,7 @@ var patientsSchema = mongoose.Schema({
 });
 
 
+
 // Our team model
 var Patient = mongoose.model('patient', patientsSchema);
 

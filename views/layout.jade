@@ -2,9 +2,14 @@ doctype html
 html(lang='en')
 	head
 		meta(charset="utf-8")
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		title Revive
 		
 		script(src='../bower_components/webcomponentsjs/webcomponents.js')
+		script(src="../bower_components/sweetalert/dist/sweetalert.min.js")
+		script(src="/script.js")
+		link(rel="stylesheet" type="text/css" href="../bower_components/sweetalert/dist/sweetalert.css")
 		link(rel='import', href='../bower_components/paper-button/paper-button.html')
 		link(rel='import', href='../bower_components/paper-tabs/paper-tabs.html')
 		link(rel='import', href='../bower_components/paper-input/paper-input.html')
@@ -13,29 +18,75 @@ html(lang='en')
 		link(rel='import', href='../bower_components/paper-dropdown/paper-dropdown.html')
 		link(rel='import', href='../bower_components/core-menu/core-menu.html')
 		link(rel='import', href='../bower_components/paper-item/paper-item.html')
+		link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+		<link rel="stylesheet" href="/styles.css">
 		link(rel="stylesheet", type="text/css", href="/main.css")
 	body
-		div.class
+		div#cssmenu
 			a(href='/')
-				h2 PatientLog
-		<paper-button>efew</paper-button>
-		<paper-tabs id="tabs" selected="all" self-end>
-		<paper-tab name="all">All</paper-tab>
-		<paper-tab name="favorites">Favorites</paper-tab>
-		<paper-tab name="about">About</paper-tab>
-		<paper-tab name="contact">Contact Us</paper-tab>
-		</paper-tabs>
-		
-		<paper-menu-button>
-		<paper-icon-button icon="menu" noink></paper-icon-button>
-		<paper-dropdown class="dropdown">
-		<core-menu class="menu">
-		<paper-item>Share</paper-item>
-		<paper-item>Settings</paper-item>
-		<paper-item>Help</paper-item>
-		</core-menu>
-		</paper-dropdown>
-		</paper-menu-button>
-		block content
+				h2 TradeGrid
+			<ul>
+			<li><a href='#'>Home</a></li>
+			<li class='has-sub'><a href='#'>Products</a>
+			<ul>
+			<li class='has-sub'><a href='#'>Product 1</a>
+			<ul>
+			<li><a href='#'>Sub Product</a></li>
+			<li><a href='#'>Sub Product</a></li></ul>
+			</li>
+			<li class='has-sub'><a href='#'>Product 2</a>
+			<ul>
+			<li><a href='#'>Sub Product</a></li>
+			<li><a href='#'>Sub Product</a></li>
+			</ul>
+			</li>
+			</ul>
+			</li>
+			<li><a href='#'>About</a></li>
+			<li><a href='#'>Contact</a></li>
+			</ul>
+		div.block1
+		div.block2
 
+			button.btn1(onclick='sweetAlert("Oops...", "Something went wrong!", "error");') Press Me
+
+		div.sidebarHeader
+			img#toggle(src="/img/collapseIcon.png" height="25px")
+		div.sidebar
+		div.btmblock
+			div.btmbar
+				form(action="/getQuote", method="post")
+					input#quoteinput(type="text")
+					input(type="submit", value="Quote")
+				form#quoteaction(action="/actionQuote", method="post")
+					label.label(for="action") Action
+					<select id="action",form="quoteaction" name="action">
+					<option value="buy">Buy</option>
+					<option value="sell">Sell</option>
+					</select>
+					label.label(for="quantity") Quantity
+					input(type="text", class="input", id="quantity", name="quantity")
+					label.label(for="type") Type
+					<select form="quoteaction", id="type", class="input", name="type">
+					<option value="limit">Limit</option>
+					<option value="stopmkt">Stop Mkt</option>
+					<option value="stoplimit">Stop limit</option>
+					<option value="tstopper">T-stop %</option>
+					<option value="tstop">T-stop $</option>
+					</select>
+					label.label(for="price") Price
+					input(type="text", id="price", class="input", name="price")
+					label.label(for="time") Time
+					<select form="quoteaction", id="time", class="input", name="time">
+					<option value="day">Day</option>
+					<option value="dayext">Day + ext</option>
+					<option value="gtc">GTC</option>
+					<option value="gtc">GTC + ext</option>
+					<option value="extam">Ext. AM</option>
+					<option value="extpm">Ext. PM</option>
+					</select>
+					input(type="submit")
+			div.btmbarHeader
+		block content
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
 		script(src="/client.js")

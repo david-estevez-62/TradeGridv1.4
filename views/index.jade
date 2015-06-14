@@ -4,13 +4,31 @@ block content
 	form.form-group(action="/search", method="post")
 				input#searchinput.searchinput(type="text", placeholder="search for patient", name="search")
 				input(type="submit", value="Search")
-	h2.add Add Patient:
+	h3.add Add Patient:
 	form.form2(action='/addPatient', method="post")
-		paper-input.input5(floatingLabel label="name", type="text", name="name", placeholder="Add Patient")
-		paper-input.input5(floatingLabel label="dob", type="text", name="dob", placeholder="Add Patient")
-		paper-input.input5(floatingLabel label="social", type="text", name="social", placeholder="Add Patient")
-		paper-input.input5(floatingLabel label="amount", type="number", name="amount", placeholder="Add Patient")
+		paper-input.input5(label="name", type="text", name="name", placeholder="Add Name")
+		paper-input.input5(label="dob", type="text", name="dob", placeholder="Add dob")
+		paper-input.input5(label="social", type="text", name="social", placeholder="Add social")
+		paper-input.input5(label="amount", type="number", name="amount", placeholder="Add amount")
 		input(type='submit')
+	<paper-button>efew</paper-button>
+	<paper-tabs id="tabs" selected="all" self-end>
+	<paper-tab name="all">All</paper-tab>
+	<paper-tab name="favorites">Favorites</paper-tab>
+	<paper-tab name="about">About</paper-tab>
+	<paper-tab name="contact">Contact Us</paper-tab>
+	</paper-tabs>
+	
+	<paper-menu-button>
+	<paper-icon-button icon="menu" noink></paper-icon-button>
+	<paper-dropdown class="dropdown">
+	<core-menu class="menu">
+	<paper-item>Share</paper-item>
+	<paper-item>Settings</paper-item>
+	<paper-item>Help</paper-item>
+	</core-menu>
+	</paper-dropdown>
+	</paper-menu-button>
 
 
 

@@ -1,11 +1,41 @@
 $(function(){
 
+
 var tabs = document.querySelector('paper-tabs');
 	tabs.addEventListener('core-select', function() {
-	console.log("Selected: " + tabs.selected);
+	// console.log("Selected: " + tabs.selected);
 });
 
+
+
+var Status = 'open';
+
+
+$("#toggle, .sidebarHeader").click(function(){
+	console.log('hi')
+	if(Status === 'open'){
+		console.log('hi')
+		$('.sidebar').toggle();
+		$(".label").css({'margin-left':'0px'});
+		Status = 'closed';
+	}else{
+		$('.sidebar').toggle();
+		$(".label").css({'margin-left':'-0.5px'});
+		Status = 'open'
+	}
 })
+
+
+$(".btmbarHeader").click(function(){
+	$('.btmbar').toggle()
+})
+
+
+
+
+})
+
+
 
 // $(document).ready(function(){
 // 	$('.chant1').on('click', function(){

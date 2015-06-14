@@ -2,8 +2,11 @@
   "dependencies": {
     "body-parser": "^1",
     "express": "^4",
+    "http": "0.0.0",
     "jade": "^1",
     "mongoose": "^4.0.1",
-    "shortid": "^2.2.1"
+    "shortid": "^2.2.1",
+    "sweetalert": "^1.0.1",
+    "util": "^0.10.3"
   }
 }
