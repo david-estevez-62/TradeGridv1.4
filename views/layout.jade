@@ -26,7 +26,7 @@ html(lang='en')
 		div#menubar
 			div#header
 				a(href='/')
-					h2#title TradeGrid
+					h1#title TradeGrid
 			div#cssmenu
 				<ul id='nav'>
 
@@ -152,12 +152,31 @@ html(lang='en')
 				</ul>
 		div.block1
 		div.block2
-
-			button.btn1(onclick='sweetAlert("Oops...", "Something went wrong!", "error");') Press Me
+		div.body1
+			h6.acctinfo Balances >
+			div.acctpt1
+				img(src='/img/acct1.png' width="40%")
+			h6.acctinfo Positions >
+			div.acctpt2
+				img(src='/img/acct2.png' width="80%")
+		div.body2
+			h5#indices Indices(market snapshot):
+			img#indexes(src="/img/indices.png")
+		//- button.btn1(onclick='sweetAlert("Oops...", "Something went wrong!", "error");') Press Me
 
 		div.sidebarHeader
 			img#toggle(src="/img/collapseIcon.png" height="25px")
 		div.sidebar
+			div.stats
+				h5
+					b Account Balance
+				h6 Account
+				h6 account_name
+				h6   Cash & cash alt
+				h6   Stock BP
+				h6   Options BP
+				h6
+					b Account value
 		div.btmblock
 			div.btmbar
 				form(action="/getQuote", method="post")
