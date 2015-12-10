@@ -47,6 +47,7 @@
 }
 #cssmenu > ul > li {
   float: left;
+  background-color: #333333;
 }
 #cssmenu.align-center > ul {
   font-size: 0;
@@ -142,6 +143,7 @@
   font-size: 12px;
   background: #333333;
   text-decoration: none;
+  opacity: 0.8;
   color: #dddddd;
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
